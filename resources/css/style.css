@@ -1,0 +1,629 @@
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+@media only screen and (max-width: 801px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  height: 91.6px; /* default height */
+  z-index: 20;
+  transition: height 0.5s ease-in-out; /* transition effect */
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1.875rem;
+}
+
+header .logo {
+  flex: 1;
+  font-size: 24px;
+  font-family: Roboto Mono;
+  color: #4a4a4a;
+}
+
+header nav ul {
+  display: flex;
+  vertical-align: middle;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+header .icon {
+  width: 1rem;
+  padding-left: 0.75rem;
+  vertical-align: middle;
+}
+
+header .mobile {
+  display: none;
+}
+
+header .join {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 801px) {
+  header {
+    height: 3.75rem;
+  }
+
+  header .join {
+    visibility: visible;
+  }
+
+  .join {
+    padding: 3px 8px;
+    background-color: #9dc20b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.25rem;
+  }
+
+  .join a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 641px) {
+  /* Show the mobile menu when the screen width is below 641px */
+  header .mobile {
+    display: block;
+    order: 2;
+    height: 49px;
+  }
+
+  header {
+    height: 3rem;
+  }
+
+  /* Show the Join button */
+  .join {
+    order: 3;
+    margin-left: auto;
+  }
+
+  /* Hide the desktop menu */
+  .desktop {
+    display: none;
+  }
+
+  /* Display the header content as a flex container */
+  header .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 49px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /* Show the nav links */
+  nav {
+    display: block;
+  }
+
+  nav.mobile ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  nav.mobile li {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  /* Vertically center images within the anchor tags */
+  nav.mobile a {
+    display: inline-block;
+    line-height: 49px;
+    text-decoration: none;
+  }
+
+  nav.mobile img {
+    vertical-align: middle;
+  }
+}
+
+/* Sign Up Section */
+
+/* Container for the sign-up section with background image */
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+  background-image: url("../images/banner-landingpage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Sign Up Call-to-Action (CTA) container */
+#sign-up-cta {
+  padding: 0 5rem 2.5rem 5rem;
+  border: solid 1px #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+  position: relative;
+  top: 171px;
+  left: 10%;
+}
+
+/* Content within the sign-up CTA container */
+#sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Heading 1 in the sign-up CTA */
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+}
+
+/* Heading 2 in the sign-up CTA */
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+}
+
+/* Strong text in the sign-up CTA */
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+/* Cursive text in the sign-up CTA */
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+/* Striking text in the sign-up CTA */
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: 0.75rem;
+}
+
+/* Button in the sign-up CTA */
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.25rem 7.25rem;
+}
+
+/* Media query for screen widths up to 800px */
+@media (max-width: 800px) {
+  /* Hide sign-up CTA on smaller screens */
+  #sign-up-cta {
+    visibility: hidden;
+  }
+
+  /* Adjust height, alignment, and background for sign-up section */
+  #sign-up-section {
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Adjust sign-up CTA properties on smaller screens */
+  #sign-up-cta {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Adjust content margin in sign-up CTA */
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  /* Hide email field in sign-up CTA */
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  /* Adjust font sizes for h1 and h2 in sign-up CTA */
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Media query for screen widths up to 450px */
+@media (max-width: 450px) {
+  /* Adjust height of the sign-up section */
+  #sign-up-section {
+    height: 20rem;
+  }
+
+  /* Adjust font sizes for h1 and h2 in sign-up CTA */
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Features Section */
+
+/* Container for the features section */
+#features-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background-color: #f3f3f3;
+  padding-bottom: 46px;
+}
+
+/* Individual feature container */
+.feature {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 0%;
+  margin-right: 0%;
+  background-color: white;
+  width: 576px;
+  height: 635px;
+}
+
+/* Image container within a feature */
+.feature .image-container {
+  width: 112%;
+  margin: 0 auto;
+}
+
+/* Feature image */
+.feature img {
+  width: 90%;
+  height: 65%;
+}
+
+/* Adjust paddings for specific feature items */
+#advanced,
+#beautifully {
+  padding-top: 40px;
+}
+
+/* Add margins between feature items */
+#first {
+  margin-right: 19px;
+}
+
+#second {
+  margin-left: 19px;
+}
+
+/* Feature title */
+.feature h2 {
+  padding-bottom: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+/* Feature description */
+.feature h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+
+/* Media query for screen widths up to 801px */
+@media (max-width: 801px) {
+  /* Adjust font size for feature title and description */
+  .feature h2 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  .feature h3 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}
+
+/* Media query for screen widths up to 801px */
+@media (max-width: 801px) {
+  /* Adjust layout for the features section */
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  /* Adjust padding for individual feature container */
+  .feature {
+    margin: 0;
+    padding: 1.25rem 1rem 0 1rem;
+  }
+}
+
+/* Media query for screen widths up to 801px */
+@media (max-width: 801px) {
+  /* Adjust height for individual feature container */
+  .feature {
+    height: auto;
+  }
+}
+
+/* Media query for screen widths up to 801px */
+@media (max-width: 801px) {
+  /* Adjust font size and weight for feature title */
+  .feature h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+/* Filters Section */
+
+/* Container for the filters section */
+#filters-section {
+  padding: 4rem 0;
+  background-color: #4a4a4a;
+}
+
+/* Text content within the filters section */
+#filters-section .content {
+  padding: 0 0.625rem;
+  margin-bottom: 5rem;
+}
+
+/* Filters section title */
+#filters-section .content h2 {
+  font-size: 36px;
+  opacity: 100%;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 5px;
+}
+
+/* Filters section description */
+#filters-section .content h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: white;
+}
+
+/* Container for filter images */
+#filters-section .images-container {
+  max-width: 100%;
+  padding: 0 1%;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+/* Filter images */
+#filters-section .image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Media query for screen widths up to 760px */
+@media (max-width: 760px) {
+  /* Adjust padding for the filters section */
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  /* Adjust margin for the text content within the filters section */
+  #filters-section .content {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust font size and padding for filters section title and description */
+  #filters-section .content h2 {
+    padding-bottom: 0.625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  #filters-section .content h3 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  /* Adjust padding for filter images container */
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+  /* Hide extra content for smaller screens */
+  #filters-section .extra {
+    display: none;
+  }
+}
+
+/* Media query for screen widths up to 800px */
+@media (max-width: 800px) {
+  /* Adjust the max width and height for filter images */
+  #filters-section .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+/* Quotes Section */
+
+/* Container for the quotes section */
+#quotes-section {
+  background-color: #ffffff;
+}
+
+/* Text content within the quotes section */
+#quotes-section .content {
+  padding: 5rem 0;
+}
+
+/* Quote text */
+#quotes-section .quote {
+  padding-right: 1.875rem;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  color: #4a4a4a;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.1;
+}
+
+/* Quote citation */
+#quotes-section .quote-citation {
+  height: 1.875rem;
+  margin-left: 30px;
+}
+
+/* Media query for screen widths up to 800px */
+@media (max-width: 800px) {
+  /* Adjust the layout of the text content within the quotes section */
+  #quotes-section .content {
+    display: grid;
+    text-align: left;
+    margin: 0 2rem;
+  }
+
+  /* Adjust font size and width for quote text */
+  #quotes-section .quote {
+    font-size: 2rem;
+    line-height: 1.4;
+    width: 36.25rem;
+  }
+
+  /* Adjust layout for quote citation */
+  #quotes-section .quote-citation {
+    display: block;
+    padding-top: 1rem;
+    margin: 0;
+  }
+
+  /* Grid layout for quote and citation containers */
+  .quote-container {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-template-rows: auto;
+    grid-column-gap: 5%;
+    align-items: center;
+  }
+
+  /* Grid placement for quote text */
+  .quote {
+    grid-column: 1;
+  }
+
+  /* Grid placement for citation container */
+  .citation-container {
+    grid-column: 2;
+    text-align: right;
+  }
+
+  /* Adjust width and height for quote citation */
+  .quote-citation {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* Footer */
+
+/* Container for the footer */
+footer {
+  background-color: #9b9b9b;
+  padding: 1.5rem 2rem;
+}
+
+/* Text content within the footer */
+footer .content {
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+  display: flex;
+}
+
+/* Copyright text */
+footer .copyright {
+  flex-grow: 1;
+}
+
+/* Media query for screen widths up to 760px */
+@media (max-width: 760px) {
+  /* Adjust font size for the text content within the footer */
+  footer .content {
+    font-size: 0.625rem;
+  }
+}
+
+/* Media query for screen widths of at least 760px */
+@media (min-width: 760px) {
+  /* Set font size for the text content within the footer */
+  footer .content {
+    font-size: 14px;
+  }
+}
